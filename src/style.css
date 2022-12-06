@@ -6,3 +6,28 @@ body {
   font-family: 'Rubik', sans-serif;
   font-size: 19px;
 }
+
+.check {
+  background: linear-gradient(
+  90deg,
+  hsla(192, 100%, 67%, 1) 0%,
+  hsla(280, 87%, 65%, 1) 100%
+);
+}
+
+@layer base {
+  :root {
+    --color-primary: hsl(220, 98%, 61%);
+    --color-gradient: hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+    /* ... */
+  }
+  .section-component-div {
+    @apply absolute top-14 flex flex-col items-center justify-center w-10/12 md:w-5/12 md:mx-[30vw] mx-8;
+  }
+  .text-div{
+    @apply py-6 outline-0 w-full  bg-light-lightbg dark:bg-dark-darkbglight px-5 rounded-md dark:text-light-very-light-grayish-blue text-dark-darkbglight
+  }
+  .bottom-text {
+    @apply dark:text-dark-dark-grayish-blue text-light-dark-grayish-blue cursor-pointer hover:text-light-very-dark-grayish-blue dark:hover:text-dark-light-grayish-blue-hover
+  }
+}
